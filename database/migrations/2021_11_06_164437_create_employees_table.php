@@ -19,6 +19,7 @@ class CreateEmployeesTable extends Migration
             $table->string('identifcation', 100);
             $table->dateTime('birth');
             $table->integer('salary');
+            $table->enum('marital_status', ["single","married","divorced"]);
             $table->timestamps();
         });
     }

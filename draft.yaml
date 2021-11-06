@@ -4,6 +4,7 @@ models:
     identifcation: string:100
     birth: datetime
     salary: integer
+    marital_status: enum:single,married,divorced
 
 controllers:
   # ...

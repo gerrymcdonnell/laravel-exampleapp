@@ -19,6 +19,7 @@ class Employee extends Model
         'identifcation',
         'birth',
         'salary',
+        'marital_status',
     ];
 
     /**

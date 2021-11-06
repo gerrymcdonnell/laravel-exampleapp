@@ -27,6 +27,7 @@ class EmployeeFactory extends Factory
             'identifcation' => $this->faker->regexify('[A-Za-z0-9]{100}'),
             'birth' => $this->faker->dateTime(),
             'salary' => $this->faker->numberBetween(-10000, 10000),
+            'marital_status' => $this->faker->randomElement(["single","married","divorced"]),
         ];
     }
 }
