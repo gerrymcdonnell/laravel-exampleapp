@@ -3,11 +3,11 @@ created:
     - database/factories/ContactInfoFactory.php
     - database/factories/DepartmentFactory.php
     - database/factories/ProjectFactory.php
-    - database/migrations/2021_11_06_174415_create_employees_table.php
-    - database/migrations/2021_11_06_174416_create_contact_infos_table.php
-    - database/migrations/2021_11_06_174417_create_departments_table.php
-    - database/migrations/2021_11_06_174418_create_projects_table.php
-    - database/migrations/2021_11_06_174419_create_employee_project_table.php
+    - database/migrations/2021_11_06_174534_create_employees_table.php
+    - database/migrations/2021_11_06_174535_create_contact_infos_table.php
+    - database/migrations/2021_11_06_174536_create_departments_table.php
+    - database/migrations/2021_11_06_174537_create_projects_table.php
+    - database/migrations/2021_11_06_174538_create_employee_project_table.php
     - app/Models/Employee.php
     - app/Models/ContactInfo.php
     - app/Models/Department.php
@@ -17,4 +17,4 @@ models:
     Employee: { name: 'string:100', identifcation: 'string:100 unique', birth: datetime, salary: unsignedinteger, marital_status: 'enum:single,married,divorced', bonus: 'decimal:8,2 nullable', order: 'unsignedinteger default:1 index', department_id: 'id foreign:departments.id', timestamps: false, relationships: { hasOne: ContactInfo, belongsToMany: Project } }
     ContactInfo: { phone: 'string:100', email: 'string:100', relationships: { belongsTo: Employee } }
     Department: { name: 'string:100', relationships: { hasMany: Employee } }
-    Project: { name: 'string:100', timestampstz: timestampsTz, relationships: { belongsToMany: Employee } }
+    Project: { name: 'string:100', timestampstz: timestampsTz, softdeletestz: softDeletesTz, relationships: { belongsToMany: Employee } }
