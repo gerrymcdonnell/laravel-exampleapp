@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Employee extends Model
+class Project extends Model
 {
     use HasFactory;
 
@@ -16,13 +16,6 @@ class Employee extends Model
      */
     protected $fillable = [
         'name',
-        'identifcation',
-        'birth',
-        'salary',
-        'marital_status',
-        'bonus',
-        'order',
-        'department_id',
     ];
 
     /**
@@ -32,16 +25,11 @@ class Employee extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'birth' => 'datetime',
-        'salary' => 'integer',
-        'bonus' => 'decimal:2',
-        'order' => 'integer',
-        'department_id' => 'integer',
     ];
 
 
-    public function department()
+    public function employees()
     {
-        return $this->belongsTo(\App\Models\Department::class);
+        return $this->belongsToMany(\App\Models\Employee::class);
     }
 }

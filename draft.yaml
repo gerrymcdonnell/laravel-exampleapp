@@ -1,10 +1,21 @@
 models:
   Employee:
     name: string:100
-    identifcation: string:100
+    identifcation: string:100 unique
     birth: datetime
-    salary: integer
+    salary: unsignedinteger
     marital_status: enum:single,married,divorced
+    bonus: decimal:8,2 nullable
+    order: unsignedinteger default:1 index
+    department_id: id foreign:departments.id
+  Department:
+    name: string:100
+    relationships:
+        hasMany: Employee
+  Project:
+    name: string:100
+    relationships:
+        belongsToMany: Employee
 
 controllers:
   # ...
