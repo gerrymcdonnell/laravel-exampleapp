@@ -34,4 +34,3 @@ controllers:
       query: where:salary where:name order:bonus limit:3
     test:
       find: id
-      dispatch: ComputeSalary with:employee

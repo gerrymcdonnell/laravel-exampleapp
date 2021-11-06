@@ -18,13 +18,51 @@ Route::get('/', function () {
 });
 
 
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
 Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
 
 
-
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
 Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
 
 
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
+Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
+
+
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
+Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
+
+
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
+Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
+
+
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
+Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
+
+
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
+Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
+
+
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
+Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
+
+
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
+Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
+
+
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
+Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
+
+
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
+Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
+
+
+Route::get('employee/test1', [App\Http\Controllers\employeeController::class, 'test1']);
 Route::get('employee/test', [App\Http\Controllers\employeeController::class, 'test']);
 
 

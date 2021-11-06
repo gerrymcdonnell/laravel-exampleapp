@@ -22,7 +22,6 @@ class employeeController extends Controller
      */
     public function test(Request $request)
     {
-        $employee = Employee::find($request->id);
-        dd($employee->toArray());
+        $employee = Employee::find($id);
     }
 }
