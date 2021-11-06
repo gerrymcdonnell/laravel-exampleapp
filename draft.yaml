@@ -23,6 +23,7 @@ models:
         hasMany: Employee
   Project:
     name: string:100
+    timestampsTz
     relationships:
         belongsToMany: Employee
 
