@@ -30,5 +30,7 @@ models:
 
 controllers:
   employee:
-    test:
+    test1:
       query: where:salary where:name order:bonus limit:3
+    test:
+      find: id
