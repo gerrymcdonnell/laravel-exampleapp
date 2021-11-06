@@ -31,4 +31,4 @@ models:
 controllers:
   employee:
     test:
-      query: where:salary order:bonus
+      query: where:salary where:name order:bonus limit:3
