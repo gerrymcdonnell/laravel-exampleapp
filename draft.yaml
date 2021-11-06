@@ -29,4 +29,6 @@ models:
         belongsToMany: Employee
 
 controllers:
-  # ...
+  employee:
+    test:
+      query: all
