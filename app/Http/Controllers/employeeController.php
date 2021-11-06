@@ -24,7 +24,7 @@ class employeeController extends Controller
     {
         $employee = Employee::find($request->id);
 
-        return redirect()->route('employee.show', ["id"=>$employee->id]);
+        return view('employee.show', compact('employee'));
     }
 
     /**
@@ -33,7 +33,6 @@ class employeeController extends Controller
      */
     public function showEmployee(Request $request)
     {
-        $employee = Employee::find($request->id);
-        dd($employee->toArray());
+        $employee = Employee::find($id);
     }
 }

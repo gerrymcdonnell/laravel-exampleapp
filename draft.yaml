@@ -34,6 +34,6 @@ controllers:
       query: where:salary where:name order:bonus limit:3
     test:
       find: employee.id
-      redirect: employee.show employee.id
+      render: employee.show with employee
     showEmployee:
       find: employee.id
