@@ -27,10 +27,23 @@ class employeeControllerTest extends TestCase
     /**
      * @test
      */
-    public function test_behaves_as_expected()
+    public function test_redirects()
     {
         $employee = Employee::factory()->create();
 
         $response = $this->get(route('employee.test'));
+
+        $response->assertRedirect(route('employee.show', [$yee.id]));
+    }
+
+
+    /**
+     * @test
+     */
+    public function showEmployee_behaves_as_expected()
+    {
+        $employee = Employee::factory()->create();
+
+        $response = $this->get(route('employee.showEmployee'));
     }
 }
