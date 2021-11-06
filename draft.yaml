@@ -8,6 +8,15 @@ models:
     bonus: decimal:8,2 nullable
     order: unsignedinteger default:1 index
     department_id: id foreign:departments.id
+    timestamps: false
+    relationships:
+        hasOne: ContactInfo
+        belongsToMany: Project
+  ContactInfo:
+      phone: string:100
+      email: string:100
+      relationships:
+        belongsTo: Employee
   Department:
     name: string:100
     relationships:

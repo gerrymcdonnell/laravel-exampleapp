@@ -10,6 +10,13 @@ class Employee extends Model
     use HasFactory;
 
     /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -39,6 +46,16 @@ class Employee extends Model
         'department_id' => 'integer',
     ];
 
+
+    public function contactInfo()
+    {
+        return $this->hasOne(\App\Models\ContactInfo::class);
+    }
+
+    public function projects()
+    {
+        return $this->belongsToMany(\App\Models\Project::class);
+    }
 
     public function department()
     {
