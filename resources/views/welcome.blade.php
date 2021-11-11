@@ -53,16 +53,15 @@
 
                         <div class="p-6">
                             
-                        <div class="flex items-center">                              
-                                
-                                http://127.0.0.1:8000/employee/test?salary=100
+                            <div class="flex items-center">                              
+                                    
+                                    http://127.0.0.1:8000/employee/test?salary=100
 
-                                http://127.0.0.1:8000/employee/test?id=3
+                                   
 
-                                <?= url('http://127.0.0.1:8000/employee/test?id=3') ?>
+                                    {{ url('http://127.0.0.1:8000/employee/test?id=3') }}
 
-                        </div>
-
+                            </div>
 
                         </div>
 
